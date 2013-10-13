@@ -1,0 +1,14 @@
+{
+  "version": "0.1",
+   "description": "This awesome memory game is created by Kristian Lugtu",  "name": "MozPH Memory Game",
+  "launch_path": "/index.html",
+  "icons": {
+    "60": "/icons/60.png",
+    "128": "/icons/128.png"
+  },
+  "developer": {
+    "name": "Kristian Lugtu",
+    "url": "http://www.mozillaph.org"
+  },
+  "default_locale": "en"
+}

@@ -1,0 +1,307 @@
+@CHARSET "UTF-8";
+@media (max-width: 650px){
+	.card, .card-reset {
+		width: 75px;
+		height: 100px;
+	}
+	.card-back, .card-back-active, .card-front, .card-front-active {
+		border-radius: 5px;
+		-moz-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+		-webkit-box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+		box-shadow: 0 1px 5px rgba(0,0,0,0.9);
+	}
+	#gameboard {
+		margin-top: 0;
+		width: 245px;
+	}
+	#card1, #card4, #card7, #card10 {
+		left: 85px;
+	}
+	#card2, #card5, #card8, #card11 {
+		left: 170px;
+	}
+	#card3, #card4, #card5 {
+		top: 110px;
+	}
+	#card6, #card7, #card8 {
+		top: 220px;
+	}
+	#card9, #card10, #card11 {
+		top: 330px;
+	}
+}
+
+@media (min-width: 650px){
+	.card, .card-reset {
+		width: 90px;
+		height: 123px;
+	}
+	.card-back, .card-back-active, .card-front, .card-front-active {
+		border-radius: 10px;
+		-moz-box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+		-webkit-box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+		box-shadow: 0 2px 10px rgba(0,0,0,0.9);
+	}
+	#gameboard {
+		width: 317px;
+	}
+	#card1, #card4, #card7, #card10 {
+		left: 103px;
+	}
+	#card2, #card5, #card8, #card11 {
+		left: 217px;
+	}
+	#card3, #card4, #card5 {
+		top: 137px;
+	}
+	#card6, #card7, #card8 {
+		top: 283px;
+	}
+	#card9, #card10, #card11 {
+		top: 430px;
+	}
+}
+
+.card, .card-reset {
+	position: fixed;
+
+}
+
+.card-back, .card-back-active {
+	width: inherit;
+	height: inherit;
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	background-image: url(../images/alab.png);
+	-webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+    -webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+    -o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.card-back-active {
+	-webkit-transform: rotateY(180deg);
+	-moz-transform: rotateY(180deg);
+}
+
+.card-front, .card-front-active {
+	width: inherit;
+	height: inherit;
+	float: none;
+	position: absolute;
+	top: 0;
+	left: 0;
+	-webkit-transform: rotateY(-180deg);
+	-moz-transform: rotateY(-180deg);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+    -o-transition: all .4s ease-in-out;
+	-ms-transition: all .4s ease-in-out;
+	-moz-transition: all .4s ease-in-out;
+	-webkit-transition: all .4s ease-in-out;
+	transition: all .4s ease-in-out;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.card-front-active {
+	-webkit-transform: rotateY(0deg);
+	-moz-transform: rotateY(0deg);
+}
+
+.card-reset {
+	-webkit-transform: rotateY(720deg);
+	-moz-transform: rotateY(720deg);
+	-webkit-transform-style: preserve-3d;
+	-moz-transform-style: preserve-3d;
+    -o-transition: all 1s ease-in-out;
+	-ms-transition: all 1s ease-in-out;
+	-moz-transition: all 2s ease-in-out;
+	-webkit-transition: all 1s ease-in-out;
+	transition: all 1s ease-in-out;
+	-moz-backface-visibility: hidden;
+	-webkit-backface-visibility: hidden;
+}
+
+.card-reset > .card-front {
+	background-image: url(../images/alab.png);
+	-webkit-background-size: 100% auto;
+    -moz-background-size: 100% auto;
+    -o-background-size: 100% auto;
+    background-size: 100% auto;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-color: white;
+}
+
+body {
+	background: url('../images/bck.jpg') no-repeat center center fixed;
+	text-align: center;
+}
+
+#gameboard {
+	position: relative;
+	margin: 0px auto;
+
+}
+
+#card0, #card3, #card6, #card9 {
+	position: absolute;
+	left: 0px;
+}
+
+#card1, #card4, #card7, #card10 {
+	position: absolute;
+}
+
+#card2, #card5, #card8, #card11 {
+	position: absolute;
+}
+
+#card0, #card1, #card2 {
+	top: 0px;
+}
+
+#card3, #card4, #card5 {
+}
+
+#card6, #card7, #card8 {
+}
+
+#card9, #card10, #card11 {
+}
+
+.pair1 > .card-front, .pair1 > .card-front-active{
+	background-image: url(../images/1.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair2 > .card-front, .pair2 > .card-front-active{
+	background-image: url(../images/2.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair3 > .card-front, .pair3 > .card-front-active{
+	background-image: url(../images/3.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair4 > .card-front, .pair4 > .card-front-active{
+	background-image: url(../images/4.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair5 > .card-front, .pair5 > .card-front-active{
+	background-image: url(../images/5.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair6 > .card-front, .pair6 > .card-front-active{
+	background-image: url(../images/6.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair7 > .card-front, .pair7 > .card-front-active{
+	background-image: url(../images/7.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair8 > .card-front, .pair8 > .card-front-active{
+	background-image: url(../images/8.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair9 > .card-front, .pair9 > .card-front-active{
+	background-image: url(../images/9.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.pair10 > .card-front, .pair10 > .card-front-active{
+	background-image: url(../images/10.png);
+	-webkit-background-size: auto 100%;
+    -moz-background-size: auto 100%;
+    -o-background-size: auto 100%;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+#status{
+	clear: both;
+	visibility:hidden
+}
+
+#status #moveslabel, #status #movesvalue{
+	clear: both;
+	visibility:hidden
+}
+
+#resetmenu{
+	clear: both;
+	visibility:hidden
+}
+
+.clear{
+clear: both;	
+}
